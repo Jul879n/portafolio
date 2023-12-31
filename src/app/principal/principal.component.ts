@@ -60,6 +60,7 @@ export class PrincipalComponent {
   title: string = 'Bienvenido a mi portafolio';
   content: string =
     'Mi nombre es Julián Araya y soy un desarrollador web apasionado por la creación de aplicaciones web y la resolución de problemas. Me considero una persona autodidacta, proactiva y con gran capacidad para trabajar en equipo.';
+  // !actualizar imagenes
   imgsPrincipal: { id: string; src: string; alt: string; clase: string }[] = [
     {
       id: 'earth',
