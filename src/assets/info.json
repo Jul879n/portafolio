@@ -1,0 +1,42 @@
+[
+  {
+    "id": "0",
+    "page": "inicio",
+    "info": {
+      "principal": {
+        "titulo": "Bienvenido a la página de inicio",
+        "contenido": "Esta es la página de inicio de la aplicación"
+      },
+      "miniaturas": [
+        {
+          "titulo": "Miniatura 1",
+          "contenido": "Contenido de la miniatura 1"
+        },
+        {
+          "titulo": "Miniatura 2",
+          "contenido": "Contenido de la miniatura 2"
+        },
+        {
+          "titulo": "Miniatura 3",
+          "contenido": "Contenido de la miniatura 3"
+        }
+      ],
+      "habilidades": {
+        "titulo": "Habilidades",
+        "lista": {
+          "el1": "Diseño web",
+          "el2": "Desarrollo front-end y back-end",
+          "el3": "Programación en diferentes lenguajes como HTML, CSS, JavaScript, Python, etc."
+        }
+      },
+      "proyectos": {
+        "titulo": "Proyectos personales",
+        "lista": {
+          "el1": "Proyecto 1",
+          "el2": "Proyecto 2",
+          "el3": "Proyecto 3"
+        }
+      }
+    }
+  }
+]

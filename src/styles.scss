@@ -1,1 +1,172 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    color-scheme: light dark;
+}
+
+@media(prefers-color-scheme:light) {
+    body {
+        @apply bg-emerald-300;
+
+        .card {
+            @apply p-2 rounded-xl bg-emerald-950;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: #FF9A8A;
+            }
+
+            p,
+            span {
+                color: #74CCA5;
+            }
+
+            a {
+                color: #FF9A8A;
+                text-decoration: underline
+            }
+
+
+        }
+    }
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply text-zinc-950;
+    }
+
+    p,
+    span {
+        @apply text-zinc-900;
+    }
+
+    .btn,
+    button {
+        @apply py-1 px-2 rounded-full font-semibold ms-2 transition-all duration-300 ease-in-out;
+        text-decoration: none;
+        background-color: #FF9A8A;
+        color: #141414;
+
+        &:hover {
+            background-color: #74CCA5;
+        }
+
+        &:active {
+            background-color: #74CCA5;
+        }
+
+        &:focus {
+            background-color: #74CCA5;
+        }
+    }
+
+    nav {
+
+        .btn,
+        button {
+            @apply py-1 px-2 rounded-full font-semibold ms-2 transition-all duration-300 ease-in-out;
+            text-decoration: none;
+            background-color: #74CCA5;
+            color: #141414;
+
+            &:hover {
+                background-color: #FF9A8A;
+            }
+
+            &:active {
+                background-color: #FF9A8A;
+            }
+
+            &:focus {
+                background-color: #FF9A8A;
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        @apply bg-zinc-800;
+
+        .card {
+            @apply rounded-xl p-2;
+            background-color: #141414;
+
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #FF9A8A;
+        }
+
+        p,
+        span {
+            color: #74CCA5;
+        }
+
+        a {
+            color: #FF9A8A;
+            text-decoration: underline
+        }
+
+        .btn,
+        button {
+            @apply py-1 px-2 rounded-full font-semibold ms-2 transition-all duration-300 ease-in-out;
+            text-decoration: none;
+            background-color: #FF9A8A;
+            color: #141414;
+
+            &:hover {
+                background-color: #74CCA5;
+            }
+
+            &:active {
+                background-color: #74CCA5;
+            }
+
+            &:focus {
+                background-color: #74CCA5;
+            }
+        }
+
+        nav {
+
+            .btn,
+            button {
+                @apply py-1 px-2 rounded-full font-semibold ms-2 transition-all duration-300 ease-in-out;
+                text-decoration: none;
+                background-color: #74CCA5;
+                color: #141414;
+
+                &:hover {
+                    background-color: #FF9A8A;
+                }
+
+                &:active {
+                    background-color: #FF9A8A;
+                }
+
+                &:focus {
+                    background-color: #FF9A8A;
+                }
+            }
+        }
+    }
+
+
+}
