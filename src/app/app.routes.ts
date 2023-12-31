@@ -16,7 +16,7 @@ export const routes: Routes = [
   },
   {
     path: 'sitios/:id',
-    title: 'title',
+    title: '',
     component: SitioComponent,
   },
 ];

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <!-- seccion principal escritorio -->
-    <div class="hidden sm:block mt-2 escritorio">
+    <div class="hidden sm:block mt-2 mb-8 escritorio">
       <div class="grid grid-cols-6 gap-2">
         <div class="card col-span-3">
           <h1>{{ title }}</h1>
@@ -59,11 +59,11 @@ import { Component } from '@angular/core';
 export class PrincipalComponent {
   title: string = 'Bienvenido a mi portafolio';
   content: string =
-    'Soy un desarrollador web apasionado por la creación de aplicaciones web y la resolución de problemas. Me considero una persona autodidacta, proactiva y con gran capacidad para trabajar en equipo.';
+    'Mi nombre es Julián Araya y soy un desarrollador web apasionado por la creación de aplicaciones web y la resolución de problemas. Me considero una persona autodidacta, proactiva y con gran capacidad para trabajar en equipo.';
   imgsPrincipal: { id: string; src: string; alt: string; clase: string }[] = [
     {
       id: 'earth',
-      src: 'https://robohash.org/earth',
+      src: 'https://armory.visualsoldiers.com/wp-content/uploads/2019/12/CSS-Background.gif',
       alt: 'robot earth',
       clase: 'col-span-3',
     },

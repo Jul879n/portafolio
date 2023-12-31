@@ -23,7 +23,10 @@
             }
 
             p,
-            span {
+            span,
+            ul,
+            ol,
+            li {
                 color: #74CCA5;
             }
 
@@ -47,7 +50,10 @@
     }
 
     p,
-    span {
+    span,
+    ul,
+    ol,
+    li {
         @apply text-zinc-900;
     }
 
@@ -115,7 +121,10 @@
         }
 
         p,
-        span {
+        span,
+        ol,
+        ul,
+        li {
             color: #74CCA5;
         }
 
