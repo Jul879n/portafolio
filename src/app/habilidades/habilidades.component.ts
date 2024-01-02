@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <div class="card text-wrap">
-      <h2 class="capitalize text-3xl">{{ title }}</h2>
+      <h2 class="capitalize text-xl sm:text-3xl font-bold">{{ title }}</h2>
       <ul class="list-inside ms-2">
         @for (habilidad of habilidades; track habilidad.id) {
         <li>

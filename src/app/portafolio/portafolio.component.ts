@@ -7,13 +7,14 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [NgOptimizedImage, RouterLink],
   template: `
+    <h1 class="capitalize text-2xl sm:text-4xl font-bold">Sitios realizados</h1>
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
       @for (sitio of sitios; track sitio.id) {
       <div class="card">
         <div class="rounded-xl relative h-36">
           <img
             class="object-cover h-full rounded-xl"
-            ngSrc="/assets/img/{{ sitio.src }}"
+            ngSrc="/assets/img/{{ sitio.img }}"
             fill
             alt="{{ sitio.title }}"
           />
@@ -35,65 +36,25 @@ export class PortafolioComponent {
   sitios: {
     id: number;
     title: string;
+    img: string;
     path: string;
     src: string;
     clase: string;
-  }[] = [
-    {
-      id: 23,
-      title: 'Mercado Libre',
-      path: '/sitios/:23',
-      src: 'mercado-libre.jpg',
-      clase: 'sm:col-span-2',
-    },
-    {
-      id: 24,
-      title: 'Netflix',
-      path: '/sitios/:24',
-      src: 'netflix.jpg',
-      clase: '',
-    },
-    {
-      id: 25,
-      title: 'Rediseño Spotify',
-      path: '/sitios/:25',
-      src: 'spotify-red.jpg',
-      clase: '',
-    },
-    {
-      id: 26,
-      title: 'Spotify',
-      path: '/sitios/:26',
-      src: 'spotify.jpg',
-      clase: 'sm:col-span-2',
-    },
-    {
-      id: 27,
-      title: 'Tienda Rayitas',
-      path: '/sitios/:27',
-      src: 'rayitas.jpg',
-      clase: 'sm:col-span-2',
-    },
-    {
-      id: 28,
-      title: 'Mi Solar',
-      path: '/sitios/:28',
-      src: 'mi-solar.jpg',
-      clase: '',
-    },
-    {
-      id: 29,
-      title: 'Zaimoku Taller',
-      path: '/sitios/:29',
-      src: 'zaimoku.jpg',
-      clase: '',
-    },
-    {
-      id: 30,
-      title: 'SiteBeam',
-      path: '/sitios/:30',
-      src: 'zaimoku.jpg',
-      clase: 'col-span-2',
-    },
-  ];
+    paragraph: string;
+    url: string;
+    list: string[];
+  }[] = [];
+
+  async ngOnInit() {
+    this.cargarDatos().then(() => {});
+  }
+
+  cargarDatos() {
+    return fetch('/assets/data/sitios.json')
+      .then((res) => res.json())
+      .then((data) => {
+        this.sitios = data;
+        console.log(this.sitios);
+      });
+  }
 }

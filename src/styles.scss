@@ -35,6 +35,25 @@
                 text-decoration: underline
             }
 
+            .btn,
+            button {
+                @apply py-1 px-2 rounded-full font-semibold ms-2 transition-all duration-300 ease-in-out;
+                text-decoration: none;
+                background-color: #FF9A8A;
+                color: #141414;
+
+                &:hover {
+                    background-color: #74CCA5;
+                }
+
+                &:active {
+                    background-color: #74CCA5;
+                }
+
+                &:focus {
+                    background-color: #74CCA5;
+                }
+            }
 
         }
     }

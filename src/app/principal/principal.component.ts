@@ -40,9 +40,14 @@ import { Component } from '@angular/core';
   .escritorio{
     img{
     background-color: #FF9A8A;
-    height: calc(50vh - 3rem);
+    @media (min-width: 640px) {
+      height: calc(70vh - 3rem);
+    }
+    @media (min-width: 768px) {
+      height: calc(50vh - 3rem);
+    }
     object-fit: cover;
-
+    opacity: 0.7;
   }
   }
   .movil{
@@ -64,25 +69,25 @@ export class PrincipalComponent {
   imgsPrincipal: { id: string; src: string; alt: string; clase: string }[] = [
     {
       id: 'earth',
-      src: 'https://armory.visualsoldiers.com/wp-content/uploads/2019/12/CSS-Background.gif',
+      src: '/assets/img/code.jpg',
       alt: 'robot earth',
       clase: 'col-span-3',
     },
     {
       id: 'earth1',
-      src: 'https://robohash.org/earth1',
+      src: '/assets/img/code-2.jpg',
       alt: 'robot earth1',
       clase: 'col-span-2',
     },
     {
       id: 'earth2',
-      src: 'https://robohash.org/earth2',
+      src: '/assets/img/code-3.jpg',
       alt: 'robot earth2',
       clase: 'col-span-2',
     },
     {
       id: 'earth3',
-      src: 'https://robohash.org/earth3',
+      src: '/assets/img/code-4.jpg',
       alt: 'robot earth3',
       clase: 'col-span-2',
     },

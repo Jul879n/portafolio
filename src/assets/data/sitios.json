@@ -1,0 +1,139 @@
+[
+  {
+    "id": 23,
+    "title": "Mercado Libre",
+    "path": "/sitios/:23",
+    "img": "mercado-libre.jpg",
+    "src": "mercadolibre-logo.png",
+    "clase": "sm:col-span-2",
+    "paragraph": "Sitio replica de mercado libre, hecho con WordPress y Woocommerce, es autoadministrable, utiliza custom post type y custom taxonomy.",
+    "url": "https://jul879n.free.nf/ecommerce",
+    "list": [
+      "Realizado con WordPress",
+      "Utiliza Woocommerce",
+      "Utiliza custom post type y custom taxonomy",
+      "Es Autoadministrable",
+      "Responsive",
+      "Utiliza jQuery",
+      "Utiliza Bootstrap"
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Netflix",
+    "path": "/sitios/:24",
+    "img": "netflix.jpg",
+    "src": "netflix-logo.png",
+    "clase": "",
+    "paragraph": "Sitio replica de Netflix autoadministrable, utiliza custom post type y custom taxonomy, hecho con WordPress.",
+    "url": "https://jul879n.free.nf/netflix",
+    "list": [
+      "Utiliza WordPress",
+      "Utiliza custom post type y custom taxonomy",
+      "Es Autoadministrable",
+      "Responsive",
+      "Funcionalidad con PHP",
+      "Utiliza Bootstrap"
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Rediseño Spotify",
+    "path": "/sitios/:25",
+    "img": "spotify-red.jpg",
+    "src": "redspotify-logo.png",
+    "clase": "",
+    "paragraph": "Este es un rediseño de Spotify en el que se aplican nuevas funciones y autoadministrable, hecho con WordPress, jQuery, utiliza custom post type y custom taxonomy además de distintos plugins de jQuery.",
+    "url": "https://jul879n.free.nf/spotify-redesign",
+    "list": [
+      "Utiliza WordPress",
+      "Utiliza custom post type y custom taxonomy",
+      "Es Autoadministrable",
+      "Responsive",
+      "Utiliza Ajax para la navegación",
+      "Utiliza jQuery para funcionalidad del reproductor y navegación",
+      "Utiliza Bootstrap"
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Spotify",
+    "path": "/sitios/:26",
+    "img": "spotify.jpg",
+    "src": "spotify-logo.png",
+    "clase": "sm:col-span-2",
+    "paragraph": "Sitio replica de la opción sin cuenta de Spotify de hace unos meses, hecho con WordPress, utiliza custom post type y custom taxonomy.",
+    "url": "https://jul879n.free.nf/spotify",
+    "list": [
+      "Utiliza WordPress",
+      "Utiliza custom post type y custom taxonomy",
+      "Es Autoadministrable",
+      "Responsive",
+      "Utiliza Bootstrap"
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Tienda Rayitas",
+    "path": "/sitios/:27",
+    "img": "rayitas.jpg",
+    "src": "rayitas-logo.png",
+    "clase": "sm:col-span-2",
+    "paragraph": "Sitio de ventas de distintos tipos de rayitas, hecho con PHP y SQL, se puede agregar el producto al carrito, eliminarlo, modificar cantidad,crear usuario, iniciar sesion, agregar productos nuevo en caso de ser admin.",
+    "url": "https://jul879n.free.nf/rayitas",
+    "list": [
+      "Utiliza PHP",
+      "Utiliza SQL",
+      "Utiliza Bootstrap",
+      "Utiliza sesiones",
+      "Utiliza MVC"
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Mi Solar",
+    "img": "mi-solar.jpg",
+    "path": "/sitios/:28",
+    "src": "misolar-logo.png",
+    "clase": "",
+    "paragraph": "Sitio web que ofrece servicios de energía solar para hogares y empresas.",
+    "url": "https://misolar.free.nf/",
+    "list": [
+      "Utiliza jQuery",
+      "Utiliza Bootstrap",
+      "Utiliza Ajax para la navegación",
+      "Sistema de login y cifrado de usuario",
+      "Utiliza localStorage",
+      "Aplicación propia"
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Zaimoku Taller",
+    "img": "zaimoku.jpg",
+    "path": "/sitios/:29",
+    "src": "zaimoku-logo.png",
+    "clase": "",
+    "paragraph": "Sitio web que ofrece productos en madera.",
+    "url": "https://zaimoku-taller.github.io/",
+    "list": ["Utiliza Bootstrap", "Diseño Moderno"]
+  },
+  {
+    "id": 30,
+    "title": "SiteBeam",
+    "img": "site-beam.jpg",
+    "path": "/sitios/:30",
+    "src": "sitebeam-logo.png",
+    "clase": "col-span-2",
+    "paragraph": "Sitio web que ofrece servicios de desarrollo y diseño web.",
+    "url": "https://sitebeam.vercel.app/",
+    "list": [
+      "Utiliza Tailwind",
+      "utiliza JavaScript para el funcionamiento",
+      "NextJS",
+      "Utiliza fetch para enviar datos de formulario",
+      "Utiliza componentes reutilizables",
+      "Utiliza navegación dinámica"
+    ]
+  }
+]
