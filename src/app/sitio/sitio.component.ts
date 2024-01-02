@@ -85,7 +85,6 @@ export class SitioComponent {
       id = id.replace(':', '');
       this.id = id;
       let cantidad = this.sitios.length;
-      console.log(cantidad);
       for (let i = 0; i < cantidad; i++) {
         if (this.sitios[i] && this.sitios[i].id == Number(id)) {
           this.info.push(this.sitios[i]);
@@ -102,7 +101,6 @@ export class SitioComponent {
       .then((res) => res.json())
       .then((data) => {
         this.sitios = data;
-        console.log(this.sitios);
       });
   }
 }

@@ -79,7 +79,6 @@ export class MiniaturaComponent {
       .then((res) => res.json())
       .then((data) => {
         this.sitios = data;
-        console.log(this.sitios);
       });
   }
 }
