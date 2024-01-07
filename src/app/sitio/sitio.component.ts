@@ -1,11 +1,12 @@
 import { Component, Inject } from '@angular/core';
 import { MiniaturaComponent } from '../miniatura/miniatura.component';
 import { DOCUMENT, NgOptimizedImage } from '@angular/common';
+import { NoExisteComponent } from '../no-existe/no-existe.component';
 
 @Component({
   selector: 'app-sitio',
   standalone: true,
-  imports: [MiniaturaComponent, NgOptimizedImage],
+  imports: [MiniaturaComponent, NgOptimizedImage, NoExisteComponent],
   template: `
     @if(id != '' && info.length > 0){
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
@@ -37,8 +38,19 @@ import { DOCUMENT, NgOptimizedImage } from '@angular/common';
         </div>
       </div>
     </div>
-    } @else {
-    <h1>Esta pagina no existe</h1>
+    }@if(noexiste == 'si-existe') {
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+      <div id="img" class="card relative sm:col-span-2 h-96 animate-pulse">
+        <img class="object-cover rounded-xl h-full" src="" alt="" />
+      </div>
+      <div>
+        <div class="card text-balance animate-pulse h-28"></div>
+        <div class="card mt-2 animate-pulse h-48"></div>
+      </div>
+    </div>
+
+    }@if(noexiste == 'no-existe') {
+    <app-no-existe />
     }
   `,
   styles: `
@@ -54,6 +66,7 @@ import { DOCUMENT, NgOptimizedImage } from '@angular/common';
 })
 export class SitioComponent {
   title: string = '';
+  noexiste: string = 'si-existe';
   id: string = '';
   info: {
     id: number;
@@ -83,7 +96,15 @@ export class SitioComponent {
     this.cargarDatos().then(() => {
       let id = this.document.location.pathname.split('/')[2];
       id = id.replace(':', '');
-      this.id = id;
+      if (this.sitios.find((sitio) => sitio.id == Number(id))) {
+        this.id = id;
+        this.noexiste = '';
+      } else {
+        this.id = '';
+        this.title = 'error 404';
+        this.noexiste = 'no-existe';
+        console.error('no se encuentra el sitio con ese id');
+      }
       let cantidad = this.sitios.length;
       for (let i = 0; i < cantidad; i++) {
         if (this.sitios[i] && this.sitios[i].id == Number(id)) {
@@ -95,7 +116,6 @@ export class SitioComponent {
       if (title) title.innerHTML = this.title;
     });
   }
-
   cargarDatos() {
     return fetch('/assets/data/sitios.json')
       .then((res) => res.json())

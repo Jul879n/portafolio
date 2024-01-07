@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <div class="card text-wrap">
-      <h2 class="capitalize text-xl sm:text-3xl font-bold">{{ title }}</h2>
+      <h2 class="capitalize text-xl sm:text-3xl font-bold mb-2">{{ title }}</h2>
       <ul class="list-inside ms-2">
         @for (habilidad of habilidades; track habilidad.id) {
         <li>
@@ -26,54 +26,49 @@ import { Component } from '@angular/core';
 export class HabilidadesComponent {
   title: string = 'mis habilidades';
   content: string =
-    'Estas habilidades y herramientas me permiten desarrollar sitios y aplicaciones web de manera eficiente y brindar una experiencia de usuario excepcional.';
+    'Estas son mis habilidades ordenadas según mi nivel de experiencia.';
   habilidades: { id: number; title: string; content: string }[] = [
-    {
-      id: 70,
-      title: 'HTML',
-      content:
-        'Lenguaje de marcado utilizado para estructurar el contenido de las páginas web.',
-    },
-    {
-      id: 71,
-      title: 'CSS',
-      content: 'Lenguaje utilizado para dar estilo y diseño a las páginas web.',
-    },
     {
       id: 72,
       title: 'JavaScript',
       content:
-        'Lenguaje de programación utilizado para agregar interactividad y funcionalidad a las páginas web.',
+        'Es mi lenguaje de programación favorito, lo utilizo para crear aplicaciones web y móviles. Además de ser uno de los lenguajes que utilizo en mis proyectos personales.',
     },
     {
-      id: 73,
-      title: 'TypeScript',
+      id: 70,
+      title: 'HTML',
       content:
-        'Superset de JavaScript que añade tipado estático y características adicionales.',
+        'Es de las primeras tecnologías que aprendí, es el lenguaje de marcado para la elaboración de páginas web.',
     },
     {
-      id: 74,
-      title: 'Angular 17',
+      id: 71,
+      title: 'CSS',
       content:
-        'Framework de JavaScript para construir aplicaciones web y móviles.',
+        'Estoy familiarizado con sus características como también con sus frameworks. De los cuales he utilizado Bootstrap, TailwindCSS',
     },
     {
       id: 75,
       title: 'WordPress',
       content:
-        'Plataforma de gestión de contenido popular para la creación y administración de sitios web.',
+        'La mayoría de mis proyectos los he realizado con este CMS, es una herramienta muy poderosa para crear sitios web de manera rápida y sencilla.',
+    },
+    {
+      id: 73,
+      title: 'TypeScript',
+      content:
+        'Llevo utilizándolo desde que empecé a utilizar Angular en diciembre de 2023, es un superconjunto de JavaScript que agrega tipos estáticos y objetos basados en clases.',
+    },
+    {
+      id: 74,
+      title: 'Angular 17',
+      content:
+        'Aún me encuentro aprendiendo este framework, pero ya he realizado algunos proyectos con el. Como este portafolio.',
     },
     {
       id: 76,
       title: 'PHP',
       content:
-        'Lenguaje de programación utilizado para el desarrollo de aplicaciones web del lado del servidor.',
-    },
-    {
-      id: 77,
-      title: 'Adobe XD',
-      content:
-        'Herramienta de diseño y prototipado de interfaces para crear experiencias de usuario atractivas.',
+        'La mayoría de mis proyectos los he realizado con este lenguaje de programación, ya que es el lenguaje que utiliza WordPress.',
     },
   ];
 }

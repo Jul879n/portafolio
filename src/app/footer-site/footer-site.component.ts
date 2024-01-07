@@ -6,15 +6,12 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <footer class="container sm:mx-auto px-3 mt-2 mb-4">
-      <div class="card grid grid-cols-1 sm:grid-cols-2 gap-2">
-        <p class="px-2 py-1">{{ autor }}</p>
-        <div class="flex justify-around">
-          @for (red of redes; track red.id) {
-          <a class="btn" href="{{ red.url }}" target="_blank"
-            ><i class="{{ red.ico }} me-2"></i>{{ red.title }}</a
-          >
-          }
-        </div>
+      <div class="card grid grid-cols-2 sm:grid-cols-4 gap-2">
+        @for (red of redes; track red.id) {
+        <a class="btn sm:w-max" href="{{ red.url }}" target="_blank"
+          ><i class="{{ red.ico }} me-2"></i>{{ red.title }}</a
+        >
+        }
       </div>
     </footer>
   `,
@@ -44,6 +41,12 @@ export class FooterSiteComponent {
       title: 'jul.03n',
       url: 'https://www.instagram.com/jul.03n',
       ico: 'fa-brands fa-instagram',
+    },
+    {
+      id: 3,
+      title: 'Julián Araya',
+      url: 'https://cl.linkedin.com/in/luis-juli%C3%A1n-alejandro-araya-contreras-004054237?trk=people_directory',
+      ico: 'fa-brands fa-linkedin',
     },
   ];
 }

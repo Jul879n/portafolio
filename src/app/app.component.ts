@@ -12,9 +12,7 @@ import { FooterSiteComponent } from './footer-site/footer-site.component';
     <main class="container sm:mx-auto px-3">
       <router-outlet />
     </main>
-    @defer () {
-    <app-footer-site />
-    }`,
+    <app-footer-site />`,
   styles: ``,
 })
 export class AppComponent {}

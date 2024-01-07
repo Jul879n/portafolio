@@ -5,91 +5,114 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <!-- seccion principal escritorio -->
-    <div class="hidden sm:block mt-2 mb-8 escritorio">
-      <div class="grid grid-cols-6 gap-2">
-        <div class="card col-span-3">
-          <h1>{{ title }}</h1>
-          <p>{{ content }}</p>
-        </div>
-        @for (img of imgsPrincipal; track img.id) {
-        <img
-          class="{{ img.clase }} rounded-xl w-full"
-          src="{{ img.src }}"
-          alt="{{ img.alt }}"
-        />
+    <section class="mb-4">
+      <div class="grid sm:grid-cols-12 grid-cols-4 gap-2">
+        @for (enlace of enlaces; track enlace.id) {
+        <a
+          href="{{ enlace.url }}"
+          target="_blank"
+          class="card sm:col-span-3 flex justify-center items-center"
+          ><i class="sm:text-4xl text-3xl {{ enlace.icon }}"></i
+        ></a>
         }
+        <div
+          class="sm:col-span-3 sm:block hidden
+        "
+        >
+          <img
+            class="rounded-xl object-cover h-full"
+            src="{{ destacados[0].src }}"
+            alt=""
+          />
+        </div>
+        <div class="card sm:col-span-6 col-span-4 sm:text-balance ">
+          <h1 class="sm:text-7xl text-4xl font-bold pb-4 capitalize">
+            {{ title }}
+          </h1>
+        </div>
+        <div class="sm:col-span-3 sm:block hidden">
+          <img
+            class="rounded-xl object-cover h-full "
+            src="{{ destacados[1].src }}"
+            alt=""
+          />
+        </div>
+
+        <div
+          class="card sm:col-span-12 col-span-4 flex justify-center items-center"
+        >
+          <h2 class="sm:text-5xl text-2xl font-bold capitalize mb-2">
+            {{ habilidad }}
+          </h2>
+        </div>
       </div>
-    </div>
-    <!-- seccion principal escritorio -->
-    <!-- seccion principal movil -->
-    <div
-      class="card mt-2 movil"
-      style="background-image: linear-gradient(
-    to bottom,rgba(0, 29, 86, 0.6),
-    rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)
-    
-  ), url('{{ imgsPrincipal[0].src }}'); "
-    >
-      <h1>{{ title }} ??</h1>
-      <p>{{ content }}</p>
-    </div>
-    <!-- seccion principal movil -->
+    </section>
   `,
   styles: `
-  .escritorio{
-    img{
-    background-color: #FF9A8A;
-    @media (min-width: 640px) {
-      height: calc(70vh - 3rem);
+  img{
+    @media (prefers-color-scheme: dark){
+      border: 4px solid #141414;
     }
-    @media (min-width: 768px) {
-      height: calc(50vh - 3rem);
+    @media (prefers-color-scheme: light){
+      border: 4px solid #74CCA5;
     }
-    object-fit: cover;
-    opacity: 0.7;
   }
-  }
-  .movil{
-    @media (min-width: 640px) {
-      display: none;
+  section{
+    
+    a{
+      text-decoration: none;
+      @apply transition-all duration-300 ease-in-out;
+      @media (prefers-color-scheme: dark){
+        color: #FF9A8A;
+      }
+      @media (prefers-color-scheme: light){
+        color: #74CCA5;
+      }
+      &:hover{
+        @media (prefers-color-scheme: dark){
+          background-color: #FF9A8A;
+          color: #141414;
+        }
+        @media (prefers-color-scheme: light){
+          background-color: #FF9A8A;
+          @apply text-emerald-950;
+        }
+      }
     }
-    height: calc(100vh - 5rem);
-    @apply bg-cover bg-no-repeat flex flex-col justify-center items-center text-center;
-  }
-  h1{
-    @apply text-2xl sm:text-4xl font-bold capitalize ;
   }`,
 })
 export class PrincipalComponent {
   title: string = 'Bienvenido a mi portafolio';
-  content: string =
-    'Mi nombre es Julián Araya y soy un desarrollador web apasionado por la creación de aplicaciones web y la resolución de problemas. Me considero una persona autodidacta, proactiva y con gran capacidad para trabajar en equipo.';
-  // !actualizar imagenes
-  imgsPrincipal: { id: string; src: string; alt: string; clase: string }[] = [
+  habilidad: string = 'HabilidadPrincipal = "JavaScript"';
+  content: string = '';
+  enlaces: { id: number; icon: string; url: string }[] = [
     {
-      id: 'earth',
-      src: '/assets/img/code.jpg',
-      alt: 'robot earth',
-      clase: 'col-span-3',
+      id: 1,
+      icon: 'fa-regular fa-envelope',
+      url: 'mailto:arayacontrerasjulian@gmail.com',
     },
     {
-      id: 'earth1',
-      src: '/assets/img/code-2.jpg',
-      alt: 'robot earth1',
-      clase: 'col-span-2',
+      id: 2,
+      icon: 'fa-brands fa-github',
+      url: 'https://github.com/Jul879n',
     },
     {
-      id: 'earth2',
-      src: '/assets/img/code-3.jpg',
-      alt: 'robot earth2',
-      clase: 'col-span-2',
+      id: 3,
+      icon: 'fa-brands fa-linkedin',
+      url: 'https://cl.linkedin.com/in/luis-juli%C3%A1n-alejandro-araya-contreras-004054237?trk=people_directory',
     },
     {
-      id: 'earth3',
-      src: '/assets/img/code-4.jpg',
-      alt: 'robot earth3',
-      clase: 'col-span-2',
+      id: 4,
+      icon: 'fa-brands fa-whatsapp',
+      url: 'https://wa.link/bojpi4/',
+    },
+  ];
+  destacados: { src: string }[] = [
+    {
+      src: '/assets/img/spotify-red.jpg',
+    },
+    {
+      src: '/assets/img/mercado-libre.jpg',
     },
   ];
 }

@@ -7,10 +7,13 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink, NgOptimizedImage],
   template: `
-    <h2 class="capitalize text-xl sm:text-3xl font-bold">
-      proyectos realizados
-    </h2>
-    <div class="grid grid-cols-3 gap-2">
+    <div class="card h-max w-max mb-2">
+      <h2 class="capitalize text-xl sm:text-3xl font-bold">
+        proyectos realizados
+      </h2>
+    </div>
+    @if (sitios.length != 0) {
+    <section class="grid grid-cols-3 gap-2">
       @for (sitio of sitios; track sitio.id) {
       <a
         class="relative card flex justify-center items-center transition-all duration-300 ease-in-out  {{
@@ -27,13 +30,26 @@ import { RouterLink } from '@angular/router';
         <h3 class="hidden">{{ sitio.title }}</h3>
       </a>
       }
-    </div>
+    </section>
+    } @else {
+    <section class="grid grid-cols-3 gap-2">
+      <div class="card animate-pulse col-span-2"></div>
+      <div class="card animate-pulse"></div>
+      <div class="card animate-pulse"></div>
+      <div class="card animate-pulse col-span-2"></div>
+      <div class="card animate-pulse col-span-2"></div>
+      <div class="card animate-pulse"></div>
+      <div class="card animate-pulse"></div>
+      <div class="card animate-pulse col-span-2"></div>
+    </section>
+    }
   `,
   styles: `
   img{
     filter: drop-shadow(0 0 .9rem white);
   }
-  .card{
+  section{
+    .card{
     @media (min-width: 640px) {
       height: calc(40vh - 3rem);
     }
@@ -55,6 +71,7 @@ import { RouterLink } from '@angular/router';
     }&:active{
       background-color: #FF9A8A;
     }
+  }
   }`,
 })
 export class MiniaturaComponent {
